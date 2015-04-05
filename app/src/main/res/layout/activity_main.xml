@@ -1,0 +1,136 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <TextClock
+        android:id="@+id/clock"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/longtitude"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:format24Hour="HH:mm:ss"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="#ff302288"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/interval"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="false"
+        android:layout_toEndOf="@+id/textView3"
+        android:inputType="number"
+        android:minHeight="70dp"
+        android:spinnerMode="dropdown" />
+
+    <EditText
+        android:id="@+id/longtitude"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/interval"
+        android:layout_toEndOf="@+id/textView2"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/latitude"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/longtitude"
+        android:layout_below="@+id/longtitude"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/latitude"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:elegantTextHeight="false"
+        android:text="Start"
+        android:textColor="@color/green_dark"
+        android:textSize="50dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/display"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/start"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Display"
+        android:textSize="26dp" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/display"
+        android:layout_centerHorizontal="true"
+        android:enabled="false"
+        android:text="Save"
+        android:textSize="26dp" />
+
+    <Button
+        android:id="@+id/tracklist"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_alignStart="@+id/save"
+        android:layout_below="@+id/save"
+        android:text="Tracklist"
+        android:textSize="26dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/latitude"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="false"
+        android:layout_below="@+id/interval"
+        android:elegantTextHeight="false"
+        android:text="Lat"
+        android:textSize="26dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/latitude"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/longitude"
+        android:text="Lng"
+        android:textSize="26dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/clock"
+        android:layout_marginBottom="18dp"
+        android:layout_toEndOf="@+id/clock"
+        android:text="Interval, S"
+        android:textSize="24dp" />
+
+    <ImageView
+        android:id="@+id/indicator"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/latitude"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="22dp"
+        android:layout_toEndOf="@+id/textView3" />
+
+
+</RelativeLayout>
